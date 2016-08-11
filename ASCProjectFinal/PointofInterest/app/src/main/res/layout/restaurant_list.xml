@@ -4,50 +4,62 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
     <LinearLayout
-        android:label="@string/restaurants"
+        android:label="@string/newLocationRestaurants"
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="100dp">
+        android:layout_height="75dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="0.20"
-            android:textSize="50sp"
+            android:textSize="30sp"
             android:gravity="center"
+            android:textColor="#000000"
             android:text="Dallas BBQ"
             />
         <Button
             android:id="@+id/btnAddDallasBBQ"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
-            android:layout_weight=".1"
+            android:layout_weight=".05"
             android:textSize="50sp"
-            android:text="+"/>
+            android:gravity="center"
+            android:textColor="#00cc00"
+            android:text="+"
+            android:background="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
 
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_marginTop="0dp"
-        android:layout_height="100dp">
+        android:layout_height="75dp">
         <TextView
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:layout_weight="0.20"
-            android:textSize="50sp"
+            android:textSize="30sp"
             android:gravity="center"
+            android:textColor="#000000"
             android:text="McDonald's"
             />
         <Button
             android:id="@+id/btnAddMcDonalds"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
-            android:layout_weight=".1"
+            android:layout_weight=".05"
             android:textSize="50sp"
-            android:text="+"/>
+            android:gravity="center"
+            android:textColor="#00cc00"
+            android:text="+"
+            android:background="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
+
 
     </LinearLayout>
 </LinearLayout>

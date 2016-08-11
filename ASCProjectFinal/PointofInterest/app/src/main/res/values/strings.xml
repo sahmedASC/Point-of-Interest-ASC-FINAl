@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Point of Interest</string>
-    <string name="category">New Location:Categories</string>
-    <string name="restaurants">Restaurants</string>
-
+    <string name="newLocationCategories">Categories</string>
+    <string name="newLocationRestaurants">Restaurants</string>
+    <string name="newLocationStores">Stores</string>
+    <string name="savedLocations">My Locations</string>
 </resources>

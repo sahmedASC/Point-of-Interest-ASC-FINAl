@@ -7,26 +7,33 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         android:weightSum="1">
 
         <Button
+            android:textColor="#FFFFFF"
+            android:textSize="30dp"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Restaurants"
             android:id="@+id/btnFood"
-            android:layout_weight="0.20"
-            android:layout_marginTop="160dp"
+            android:layout_weight="0.25"
+            android:layout_marginTop="120dp"
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:background="@color/colorPrimary"/>
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Stores and Shops"
             android:id="@+id/btnStores"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.20" />
+            android:layout_weight="0.25"
+            android:textSize="30dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"/>
     </LinearLayout>
 </LinearLayout>

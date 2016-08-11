@@ -15,11 +15,28 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ActivityLocationCategory">
+        <activity
+            android:name=".ActivityLocationCategory"
+            android:label="@string/newLocationCategories"
+            android:parentActivityName=".MainActivity">
         </activity>
 
-        <activity android:name=".ActivityRestaurants">
+        <activity
+            android:name=".ActivityRestaurants"
+            android:label="@string/newLocationRestaurants"
+            android:parentActivityName=".ActivityLocationCategory">
+        </activity>
 
+        <activity
+            android:name=".ActivityShopping"
+            android:label="@string/newLocationStores"
+            android:parentActivityName=".ActivityLocationCategory">
+        </activity>
+
+        <activity
+            android:name=".ActivityMyLocations"
+            android:label="@string/savedLocations"
+            android:parentActivityName=".MainActivity">
         </activity>
 
     </application>
