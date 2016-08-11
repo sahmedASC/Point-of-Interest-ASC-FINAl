@@ -17,15 +17,14 @@
             android:layout_weight="0.20"
             android:textSize="50sp"
             android:gravity="center"
-            android:text="Dallas BBQ"
+            android:text="PlaceHolder"
             />
         <Button
-            android:id="@+id/btnAddDallasBBQ"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
             android:layout_weight=".1"
             android:textSize="50sp"
-            android:text="+"/>
+            android:text="-"/>
 
     </LinearLayout>
     <LinearLayout
@@ -39,15 +38,14 @@
             android:layout_weight="0.20"
             android:textSize="50sp"
             android:gravity="center"
-            android:text="McDonald's"
+            android:text="PlaceHolder"
             />
         <Button
-            android:id="@+id/btnAddMcDonalds"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
             android:layout_weight=".1"
             android:textSize="50sp"
-            android:text="+"/>
+            android:text="-"/>
 
     </LinearLayout>
 </LinearLayout>

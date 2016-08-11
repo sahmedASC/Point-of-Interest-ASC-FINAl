@@ -15,6 +15,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".ActivityLocationCategory">
+        </activity>
+
+        <activity android:name=".ActivityRestaurants">
+
+        </activity>
+
     </application>
 
 </manifest>

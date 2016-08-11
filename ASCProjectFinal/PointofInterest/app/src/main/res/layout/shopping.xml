@@ -17,10 +17,10 @@
             android:layout_weight="0.20"
             android:textSize="50sp"
             android:gravity="center"
-            android:text="Dallas BBQ"
+            android:text="Macy's"
             />
         <Button
-            android:id="@+id/btnAddDallasBBQ"
+            android:id="@+id/btnAddMacys"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
             android:layout_weight=".1"
@@ -39,10 +39,10 @@
             android:layout_weight="0.20"
             android:textSize="50sp"
             android:gravity="center"
-            android:text="McDonald's"
+            android:text="GameStop"
             />
         <Button
-            android:id="@+id/btnAddMcDonalds"
+            android:id="@+id/btnAddGameStop"
             android:layout_height="fill_parent"
             android:layout_width="0dp"
             android:layout_weight=".1"
