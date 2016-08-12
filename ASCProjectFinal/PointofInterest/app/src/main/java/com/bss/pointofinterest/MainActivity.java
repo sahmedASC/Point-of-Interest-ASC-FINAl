@@ -8,12 +8,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+//Built by Bryan Medina, Saaif Ahmed, Swarup Dhar. All Star Code 3 Final Project. 8/17/16
 public class MainActivity extends AppCompatActivity {
 
     @Override
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //creates a button to switch between pages.
         Button newLocBtn = (Button) findViewById(R.id.btnNewLocation);
 
         // handle button press for the new location button
