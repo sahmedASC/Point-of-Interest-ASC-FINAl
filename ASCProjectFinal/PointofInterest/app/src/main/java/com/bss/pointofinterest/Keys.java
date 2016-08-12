@@ -8,11 +8,15 @@ public class Keys {
 
     public final String FILENAME = "Locations";
     public final String DALLAS_BBQ = "Dallas BBQ";
-    public final String MCDONALDS = "McDonalds";
-    public List<String> RESTAURANTS = new ArrayList<>();
-
+    public final String MCDONALDS = "McDonald's";
+    public final String MACYS="Macy's";
+    public final String GAMESTOP="GameStop";
+    public List<String> LOCATIONS = new ArrayList<>();
     public Keys(){
-        RESTAURANTS.add(DALLAS_BBQ);
-        RESTAURANTS.add(MCDONALDS);
+        LOCATIONS.add(DALLAS_BBQ);
+        LOCATIONS.add(MCDONALDS);
+        LOCATIONS.add(MACYS);
+        LOCATIONS.add(GAMESTOP);
+        
     }
 }

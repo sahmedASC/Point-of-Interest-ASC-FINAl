@@ -33,6 +33,7 @@
             android:textSize="50sp"
             android:textColor="#00cc00"
             android:text="+"
+            android:onClick="onClick"
             android:background="#FFFFFF"
             style="?android:attr/borderlessButtonStyle"/>
 
@@ -62,6 +63,7 @@
             android:textSize="50sp"
             android:textColor="#00cc00"
             android:text="+"
+            android:onClick="onClick"
             android:background="#FFFFFF"
             style="?android:attr/borderlessButtonStyle"
             />

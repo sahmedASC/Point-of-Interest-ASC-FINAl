@@ -39,11 +39,11 @@ public class ActivityMyLocations extends AppCompatActivity {
         }
 
         SharedPreferences settings = getSharedPreferences(key.FILENAME, 0);
-        for(int i = 0; i < key.RESTAURANTS.size(); i++){
-            boolean returnedData = settings.getBoolean(key.RESTAURANTS.get(i), false);
+        for(int i = 0; i < key.LOCATIONS.size(); i++){
+            boolean returnedData = settings.getBoolean(key.LOCATIONS.get(i), false);
             if(returnedData){
-                userData.add(key.RESTAURANTS.get(i));
-                displayLocation(key.RESTAURANTS.get(i));
+                userData.add(key.LOCATIONS.get(i));
+                displayLocation(key.LOCATIONS.get(i));
             }
         }
     }
@@ -70,7 +70,7 @@ public class ActivityMyLocations extends AppCompatActivity {
         layoutParams.setMargins(0, 20, 0, 20);
         parent.setLayoutParams(layoutParams);
 
-        Button btn = new Button(ActivityMyLocations.this);
+        final Button btn = new Button(ActivityMyLocations.this);
         btn.setText(location + " -");
         btn.setTextSize(30);
         btn.setTextColor(Color.RED);
@@ -81,5 +81,40 @@ public class ActivityMyLocations extends AppCompatActivity {
         parent.addView(btn);
         root.addView(parent);
 
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (btn.getText().equals(key.DALLAS_BBQ+" -")){
+                   SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.DALLAS_BBQ,false);
+                    editor.commit();
+                    updateData();
+                }
+                if(btn.getText().equals(key.MCDONALDS+" -")){
+                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.MCDONALDS,false);
+                    editor.commit();
+                    updateData();
+                }
+                if (btn.getText().equals(key.MACYS+" -")){
+                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.MACYS,false);
+                    editor.commit();
+                    updateData();
+                }
+                if (btn.getText().equals(key.GAMESTOP+" -")){
+                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.GAMESTOP,false);
+                    editor.commit();
+                    updateData();
+                }
+            }
+        });
+
     }
+
 }

@@ -39,6 +39,31 @@
             android:parentActivityName=".MainActivity">
         </activity>
 
+        <activity
+            android:name=".ActivityDallasBBQ"
+            android:label="@string/headerDallasBBQ"
+            android:parentActivityName=".ActivityRestaurants">
+        </activity>
+
+        <activity
+            android:name=".ActivityMcDonalds"
+            android:label="@string/headerMcDonalds"
+            android:parentActivityName=".ActivityRestaurants">
+        </activity>
+
+        <activity
+            android:name=".ActivityMacys"
+            android:label="@string/headerMacys"
+            android:parentActivityName=".ActivityShopping">
+        </activity>
+
+        <activity
+            android:name=".ActivityGameStop"
+            android:label="@string/headerGameStop"
+            android:parentActivityName=".ActivityShopping">
+        </activity>
+
+        <service android:name=".ActivityCheckMap"></service>
     </application>
 
 </manifest>

@@ -18,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //creates a button to switch between pages.
         Button newLocBtn = (Button) findViewById(R.id.btnNewLocation);
+        Intent intent = new Intent(this, ActivityCheckMap.class);
+        startService(intent);
 
         // handle button press for the new location button
         if(newLocBtn != null) {
