@@ -8,9 +8,10 @@
     <string name="headerMcDonalds">McDonald\'s</string>
     <string name="headerMacys">Macy\'s</string>
     <string name="headerGameStop">GameStop</string>
-    <string name="infoDallasBBQ">Dallas BBQ is a restaurant style grill, specializing in Western Style Foods such as steaks, ribs, shrimp, fish, burgers, and wings. Prices are relatively high however food portions are large, finishing one plate is an accomplishment.</string>
-    <string name="infoMcDonalds">McDonald\'s primarily sells hamburgers, cheeseburgers, chicken products, french fries, breakfast items, soft drinks, milkshakes, and desserts. In response to changing consumer tastes, the company has expanded its menu to include salads, fish, wraps, smoothies and fruit. </string>
+    <string name="infoDallasBBQ">Dallas BBQ is a restaurant style grill, specializing in Western Style Foods such as steaks, ribs, shrimp, fish, burgers, and wings. Prices are relatively high however food portions are large, finishing one plate is an accomplishment.                    .</string>
+    <string name="infoMcDonalds">McDonald\'s primarily sells hamburgers, cheeseburgers, chicken products, french fries, breakfast items, soft drinks, milkshakes, and desserts. In response to changing consumer tastes, the company has expanded its menu to include salads, fish, wraps, smoothies and fruit.                    .</string>
     <string name="infoMacys">Macy\'s is a large department store with a variety of products for both men and women such as clothing, accessories, and cosmetics.</string>
     <string name="infoGameStop">GameStop is a video game store selling, video games, video game consoles, controllers, merchandise, and gift cards. </string>
-    <string name="apiKey">AIzaSyBIvg6zRjq4Qa1jcksDpHbuIciuyc29pB4</string>
+    <string name="androidapiKey">AIzaSyBIvg6zRjq4Qa1jcksDpHbuIciuyc29pB4</string>
+    <string name="webapiKey">AIzaSyCskKiWaerqiOo2gadGRBp3nd0qJB3yrd4</string>
 </resources>

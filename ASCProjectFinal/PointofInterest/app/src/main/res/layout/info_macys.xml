@@ -18,21 +18,25 @@
             android:src="@drawable/macys_logo"/>
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_marginTop="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp">
-        <TextView
-            android:id="@+id/infoText"
-            android:layout_width="0dp"
-            android:layout_height="fill_parent"
-            android:layout_weight="0.20"
-            android:textSize="30sp"
-            android:gravity="center"
-            android:textColor="#000000"
-            android:text="@string/infoMacys"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+            <TextView
+                android:id="@+id/infoText"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.20"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="@string/infoMacys"/>
 
-    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

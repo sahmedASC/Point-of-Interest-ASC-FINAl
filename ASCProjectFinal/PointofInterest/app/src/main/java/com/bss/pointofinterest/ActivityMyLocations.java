@@ -20,17 +20,14 @@ import java.util.Map;
 public class ActivityMyLocations extends AppCompatActivity {
 
     Keys key = new Keys();
-    public static ArrayList<String> userData;
+    public static ArrayList<String> userData  = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_locations);
-        userData = new ArrayList<>();
         updateData();
     }
-
-
 
     public void updateData(){
         LinearLayout root = (LinearLayout) findViewById(R.id.locationRootLayout);
@@ -42,7 +39,7 @@ public class ActivityMyLocations extends AppCompatActivity {
         for(int i = 0; i < key.LOCATIONS.size(); i++){
             boolean returnedData = settings.getBoolean(key.LOCATIONS.get(i), false);
             if(returnedData){
-                userData.add(key.LOCATIONS.get(i));
+                userData.add(key.LOCATIONS.get(i).replace("-", "").trim());
                 displayLocation(key.LOCATIONS.get(i));
             }
         }
@@ -71,9 +68,13 @@ public class ActivityMyLocations extends AppCompatActivity {
         parent.setLayoutParams(layoutParams);
 
         final Button btn = new Button(ActivityMyLocations.this);
-        btn.setText(location + " -");
+        final String minus = "        -";
+        btn.setText(location + minus);
         btn.setTextSize(30);
         btn.setTextColor(Color.RED);
+        btn.setBackgroundColor(Color.argb(1, 255, 255, 255));
+        btn.setHorizontalFadingEdgeEnabled(false);
+        btn.setVerticalFadingEdgeEnabled(false);
         btn.setLayoutParams(new ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT));
@@ -84,28 +85,28 @@ public class ActivityMyLocations extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btn.getText().equals(key.DALLAS_BBQ+" -")){
+                if (btn.getText().equals(key.DALLAS_BBQ+minus)){
                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.DALLAS_BBQ,false);
                     editor.commit();
                     updateData();
                 }
-                if(btn.getText().equals(key.MCDONALDS+" -")){
+                if(btn.getText().equals(key.MCDONALDS+minus)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.MCDONALDS,false);
                     editor.commit();
                     updateData();
                 }
-                if (btn.getText().equals(key.MACYS+" -")){
+                if (btn.getText().equals(key.MACYS+minus)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.MACYS,false);
                     editor.commit();
                     updateData();
                 }
-                if (btn.getText().equals(key.GAMESTOP+" -")){
+                if (btn.getText().equals(key.GAMESTOP+minus)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.GAMESTOP,false);
