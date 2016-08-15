@@ -30,19 +30,38 @@ public class ActivityMyLocations extends AppCompatActivity {
     }
 
     public void updateData(){
+        for (int i=0;i<userData.size();i++){
+            userData.remove(i);
+        }
         LinearLayout root = (LinearLayout) findViewById(R.id.locationRootLayout);
         if (root.getChildCount() > 0){
             root.removeAllViews();
-        }
 
+            LinearLayout parent = new LinearLayout(this);
+            parent.setLayoutParams(new ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            parent.setOrientation(LinearLayout.HORIZONTAL);
+            parent.setGravity(Gravity.CENTER);
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            layoutParams.setMargins(0, 20, 0, 20);
+            parent.setLayoutParams(layoutParams);
+            TextView t = new TextView(this);
+            t.setText("Tap to remove");
+            t.setTextSize(25);
+            parent.addView(t);
+            root.addView(parent);
+        }
         SharedPreferences settings = getSharedPreferences(key.FILENAME, 0);
         for(int i = 0; i < key.LOCATIONS.size(); i++){
             boolean returnedData = settings.getBoolean(key.LOCATIONS.get(i), false);
             if(returnedData){
-                userData.add(key.LOCATIONS.get(i).replace("-", "").trim());
+                userData.add(key.LOCATIONS.get(i).trim());
                 displayLocation(key.LOCATIONS.get(i));
             }
         }
+        displayLocation("Chelsea Inn");
     }
 
 
@@ -68,8 +87,7 @@ public class ActivityMyLocations extends AppCompatActivity {
         parent.setLayoutParams(layoutParams);
 
         final Button btn = new Button(ActivityMyLocations.this);
-        final String minus = "        -";
-        btn.setText(location + minus);
+        btn.setText(location);
         btn.setTextSize(30);
         btn.setTextColor(Color.RED);
         btn.setBackgroundColor(Color.argb(1, 255, 255, 255));
@@ -85,28 +103,28 @@ public class ActivityMyLocations extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (btn.getText().equals(key.DALLAS_BBQ+minus)){
+                if (btn.getText().equals(key.DALLAS_BBQ)){
                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.DALLAS_BBQ,false);
                     editor.commit();
                     updateData();
                 }
-                if(btn.getText().equals(key.MCDONALDS+minus)){
+                if(btn.getText().equals(key.MCDONALDS)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.MCDONALDS,false);
                     editor.commit();
                     updateData();
                 }
-                if (btn.getText().equals(key.MACYS+minus)){
+                if (btn.getText().equals(key.MACYS)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.MACYS,false);
                     editor.commit();
                     updateData();
                 }
-                if (btn.getText().equals(key.GAMESTOP+minus)){
+                if (btn.getText().equals(key.GAMESTOP)){
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.GAMESTOP,false);
