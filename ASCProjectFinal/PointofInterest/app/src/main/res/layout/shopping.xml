@@ -20,7 +20,7 @@
             android:textSize="30sp"
             android:textColor="#000000"
             android:gravity="center"
-            android:text="Macy's"
+            android:text="All Star Comics"
             android:textAllCaps="false"
             android:background="#FFFFFF"
             style="?android:attr/borderlessButtonStyle"/>
@@ -67,6 +67,67 @@
             android:background="#FFFFFF"
             style="?android:attr/borderlessButtonStyle"
             />
-
     </LinearLayout>
+
+    <LinearLayout
+        android:label="@string/newLocationStores"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.20"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Midtown Comics"
+            android:textAllCaps="false"
+            android:background="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:id="@+id/midCom"
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:textSize="50sp"
+            android:textColor="#00cc00"
+            android:text="+"
+            android:onClick="onClick"
+            android:background="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:label="@string/newLocationStores"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="75dp">
+        <Button
+            android:id="@+id/ccDesc"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.20"
+            android:textSize="30sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:text="Comic Central"
+            android:textAllCaps="false"
+            android:background="#FFFFFF"
+            style="?android:attr/borderlessButtonStyle"/>
+
+        <Button
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight=".05"
+            android:textSize="50sp"
+            android:textColor="#00cc00"
+            android:text="+"
+            android:onClick="onClick"
+            android:background="#FFFFFF"
+            android:id="@+id/cc"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
 </LinearLayout>

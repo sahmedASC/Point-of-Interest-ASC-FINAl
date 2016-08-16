@@ -58,14 +58,22 @@ public class ActivityShopping extends AppCompatActivity {
             case R.id.btnAddMacys:
                 editor.putBoolean(key.MACYS,true);
                 editor.commit();
-                Toast.makeText(ActivityShopping.this, "Saved to My Locations", Toast.LENGTH_LONG).show();
                 break;
             case R.id.btnAddGameStop:
                 editor.putBoolean(key.GAMESTOP,true);
                 editor.commit();
-                Toast.makeText(ActivityShopping.this, "Saved to My Locations", Toast.LENGTH_LONG).show();
                 break;
+            case R.id.cc:
+                editor.putBoolean(key.COMIC_CENTRAL, true);
+                editor.commit();
+                break;
+            case R.id.midCom:
+                editor.putBoolean(key.MID_COMICS, true);
+                editor.commit();
+                break;
+
         }
+        Toast.makeText(ActivityShopping.this, "Saved to My Locations", Toast.LENGTH_LONG).show();
     }
 
 }

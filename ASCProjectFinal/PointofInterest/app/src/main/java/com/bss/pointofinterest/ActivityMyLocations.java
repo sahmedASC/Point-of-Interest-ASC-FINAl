@@ -61,7 +61,6 @@ public class ActivityMyLocations extends AppCompatActivity {
                 displayLocation(key.LOCATIONS.get(i));
             }
         }
-        displayLocation("Chelsea Inn");
     }
 
 
@@ -128,6 +127,20 @@ public class ActivityMyLocations extends AppCompatActivity {
                     SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
                     SharedPreferences.Editor editor = preferences.edit();
                     editor.putBoolean(key.GAMESTOP,false);
+                    editor.commit();
+                    updateData();
+                }
+                if (btn.getText().equals(key.COMIC_CENTRAL)){
+                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.COMIC_CENTRAL,false);
+                    editor.commit();
+                    updateData();
+                }
+                if (btn.getText().equals(key.MID_COMICS)){
+                    SharedPreferences preferences= getSharedPreferences(key.FILENAME, 0);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(key.MID_COMICS,false);
                     editor.commit();
                     updateData();
                 }

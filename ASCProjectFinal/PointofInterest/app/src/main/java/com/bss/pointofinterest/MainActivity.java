@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
-        startAlarm();
+        //startAlarm();
     }
 
     public void startAlarm() {
